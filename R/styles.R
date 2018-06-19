@@ -23,9 +23,12 @@ extract_style <- function(package){
 }
 
 check_with_style <- function(package, style, threshold = 0.01){
-  to_check <- style %>%
-    filter(adjusted < threshold) %>%
+  to_ignore <- style %>%
+    filter(adjusted > threshold) %>%
     `$`('linter')
 
-  lint_package(package, linters = to_check %>% map(get))
+  baselinters <- lintr:::settings$linters
+  to_use <- baselinters[setdiff(names(baselinters), to_ignore)]
+
+  lint_package(package, linters = to_use)
 }
