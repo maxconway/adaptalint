@@ -1,7 +1,4 @@
 # adaptalint
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/adaptalint)](https://cran.r-project.org/package=adaptalint)
-[![Travis-CI Build Status](https://travis-ci.org/maxconway/fbar.svg?branch=master)](https://travis-ci.org/maxconway/fbar)
-![RStudio_CRAN_mirror_downloads](http://cranlogs.r-pkg.org/badges/adaptalint)
 
 Adaptalint is a package to infer the code style from one package and use it to check another.
 This makes linting much less painful, since you don't need to do as much configuration, and makes it easy to compare your code quality to real examples.
