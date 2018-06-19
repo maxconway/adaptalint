@@ -38,7 +38,7 @@ extract_style <- function(package){
 #'
 #' @param package path to the package to check
 #' @param style a style data frame, as created by \code{\link{extract_style}}
-#' @param threshold the proportional occurence threshold above which a lint is ignored
+#' @param threshold the proportional occurrence threshold above which a lint is ignored
 #'
 #' @import purrr
 #' @import lintr
