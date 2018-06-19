@@ -2,7 +2,7 @@
 % Please edit documentation in R/styles.R
 \name{extract_style}
 \alias{extract_style}
-\title{Extract lint error distribution from a package}
+\title{Find style of a package}
 \usage{
 extract_style(package)
 }
@@ -13,5 +13,8 @@ extract_style(package)
 a data_frame with columns \code{lint}, \code{count}, \code{total_lints} and \code{adjusted}
 }
 \description{
-Returns the absolute and relative counts of all lint errors found in the package.
+Returns the absolute and relative counts of all lint errors found in the
+package.
+The resulting style data can be applied to another file with
+\code{\link{check_with_style}}.
 }

@@ -3,3 +3,4 @@
 export(extract_style)
 import(dplyr)
 import(lintr)
+import(purrr)
