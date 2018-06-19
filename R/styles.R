@@ -13,16 +13,22 @@
 #' @import dplyr
 #'
 #' @export
+#' @examples
+#' \dontrun{
+#' path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
+#'
+#' style <- extract_style(path)
+#' }
 extract_style <- function(package){
   package %>%
     lint_package() %>%
     as_tibble() %>%
     mutate(total_lints = n()) %>%
-    group_by(linter) %>%
+    group_by(.data$linter) %>%
     summarise(count = n(),
-              total_lints = mean(total_lints)
+              total_lints = mean(.data$total_lints)
               ) %>%
-    mutate(adjusted = count/total_lints)
+    mutate(adjusted = .data$count/.data$total_lints)
 }
 
 #' Lint a package, using the style of another package
@@ -30,14 +36,28 @@ extract_style <- function(package){
 #' Apply a style extracted using \code{\link{extract_style}}, in order to
 #' check for only the style issues that aren't excepted in that package.
 #'
+#' @param package path to the package to check
+#' @param style a style data frame, as created by \code{\link{extract_style}}
+#' @param threshold the proportional occurence threshold above which a lint is ignored
+#'
 #' @import purrr
 #' @import lintr
+#'
+#' @examples
+#' \dontrun{
+#' data("style_purrr")
+#'
+#' path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
+#'
+#' check_with_style(package = path, style = style_purrr)
+#' }
 check_with_style <- function(package, style, threshold = 0.01){
   to_ignore <- style %>%
-    filter(adjusted > threshold) %>%
+    filter(.data$adjusted > threshold) %>%
     `$`('linter')
 
-  baselinters <- lintr:::settings$linters
+  baselinters <- get('settings', envir = asNamespace('lintr'),
+                     inherits = FALSE)$linters
   to_use <- baselinters[setdiff(names(baselinters), to_ignore)]
 
   lint_package(package, linters = to_use)

@@ -18,3 +18,10 @@ package.
 The resulting style data can be applied to another file with
 \code{\link{check_with_style}}.
 }
+\examples{
+\dontrun{
+path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
+
+style <- extract_style(path)
+}
+}

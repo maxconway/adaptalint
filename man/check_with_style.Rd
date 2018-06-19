@@ -6,7 +6,23 @@
 \usage{
 check_with_style(package, style, threshold = 0.01)
 }
+\arguments{
+\item{package}{path to the package to check}
+
+\item{style}{a style data frame, as created by \code{\link{extract_style}}}
+
+\item{threshold}{the proportional occurence threshold above which a lint is ignored}
+}
 \description{
 Apply a style extracted using \code{\link{extract_style}}, in order to
 check for only the style issues that aren't excepted in that package.
+}
+\examples{
+\dontrun{
+data("style_purrr")
+
+path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
+
+check_with_style(package = path, style = style_purrr)
+}
 }
