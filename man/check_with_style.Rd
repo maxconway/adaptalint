@@ -11,7 +11,7 @@ check_with_style(package, style, threshold = 0.01)
 
 \item{style}{a style data frame, as created by \code{\link{extract_style}}}
 
-\item{threshold}{the proportional occurence threshold above which a lint is ignored}
+\item{threshold}{the proportional occurrence threshold above which a lint is ignored}
 }
 \description{
 Apply a style extracted using \code{\link{extract_style}}, in order to
