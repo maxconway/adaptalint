@@ -1,23 +1,21 @@
 context("basics")
 
-test_that("extract no errors", {
-  a <- extract_style('.')
+test_that("exports are correct", {
+  expect_equal(find('extract_style'), 'package:adaptalint')
+  expect_equal(find('check_with_style'), 'package:adaptalint')
 })
 
-test_that("apply no errors", {
+test_that("extract works in simple case", {
   a <- extract_style('.')
-
-  b <- check_with_style('.', a)
+  expect_is(a, 'lints')
 })
 
-test_that("no errors 2", {
-  skip('downloading not working correctly')
-  path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
+test_that("apply works in simple case", {
+  data("style_dplyr")
 
-  style_adaptalint <- extract_style(path)
-
-  data("style_purrr")
-
-  a <- check_with_style(package = path, style = style_purrr)
-  a <- check_with_style(package = path, style = style_adaptalint)
+  a <- lintr::lint_package('.')
+  b <- check_with_style('.', style_dplyr)
+  expect_is(a, 'lints')
+  expect_is(b, 'lints')
+  expect_lte(b, a)
 })

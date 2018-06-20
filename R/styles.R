@@ -43,6 +43,8 @@ extract_style <- function(package){
 #' @import purrr
 #' @import lintr
 #'
+#' @export
+#'
 #' @examples
 #' \dontrun{
 #' data("style_purrr")
