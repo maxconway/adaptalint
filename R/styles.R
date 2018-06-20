@@ -3,7 +3,7 @@
 #' Returns the absolute and relative counts of all lint errors found in the
 #' package.
 #' The resulting style data can be applied to another file with
-#' \code{\link{check_with_style}}.
+#' \code{\link{lint_with_style}}.
 #'
 #' @param package path to the package of interest
 #'
@@ -51,9 +51,9 @@ extract_style <- function(package){
 #'
 #' path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
 #'
-#' check_with_style(package = path, style = style_purrr)
+#' lint_with_style(package = path, style = style_purrr)
 #' }
-check_with_style <- function(package, style, threshold = 0.01){
+lint_with_style <- function(package, style, threshold = 0.01){
   to_ignore <- style %>%
     filter(.data$adjusted > threshold) %>%
     `$`('linter')

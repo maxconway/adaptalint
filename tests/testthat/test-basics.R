@@ -14,7 +14,7 @@ test_that("apply works in simple case", {
   data("style_dplyr")
 
   a <- lintr::lint_package('.')
-  b <- check_with_style('.', style_dplyr)
+  b <- lint_with_style('.', style_dplyr)
   expect_is(a, 'lints')
   expect_is(b, 'lints')
   expect_lte(b, a)

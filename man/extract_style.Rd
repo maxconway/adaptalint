@@ -16,7 +16,7 @@ a data_frame with columns \code{lint}, \code{count}, \code{total_lints} and \cod
 Returns the absolute and relative counts of all lint errors found in the
 package.
 The resulting style data can be applied to another file with
-\code{\link{check_with_style}}.
+\code{\link{lint_with_style}}.
 }
 \examples{
 \dontrun{

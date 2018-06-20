@@ -28,8 +28,8 @@ style_adaptalint <- extract_style(path)
 data("style_purrr")
 
 # Check against this package against another to see how it measures up
-a <- check_with_style(package = path, style = style_purrr)
+a <- lint_with_style(package = path, style = style_purrr)
 
 # Or check it against itself, highlighting only those lint errors that the package judges as important
-a <- check_with_style(package = path, style = style_adaptalint)
+a <- lint_with_style(package = path, style = style_adaptalint)
 ```
