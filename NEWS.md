@@ -3,6 +3,7 @@
 - Fix for namespace issue where I forgot to export check_with_style.
 - Improved and extended tests.
 - Added more detail to readme.
+- Renamed check_with_style to lint_with_style
 
 # adaptalint 0.1.0
 
