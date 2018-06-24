@@ -3,24 +3,10 @@ This is a resubmission. In this version I have:
 
 - Elaborated on on description text, including saying that in this case, 
     'code style' means which lintr rules are followed and which aren't.
-- Added git2r:: to examples where required
 - Removed `dontrun` on examples
-- Added comments to examples
-
-However, I have not been able to move from 
-
-`
-path <- git2r::workdir(git2r::clone(
-  "https://github.com/maxconway/adaptalint", 
-  tempfile()
-))
-`
-
-to `path <- system.file(package="adaptalint")`.
-
-Although the suggested method is far more elegant, it doesn't typically allow
-access to the source .R files for the package, which are required for the 
-example.
+- Removed examples on functions dealing with packages - there is no clean way
+    of doing it.
+- Added two new functions, with examples, dealing with single files
 
 
 ## Test environments

@@ -2,31 +2,28 @@
 % Please edit documentation in R/styles.R
 \name{lint_with_style}
 \alias{lint_with_style}
-\title{Lint a package, using the style of another package}
+\title{Lint a file, using a known style}
 \usage{
-lint_with_style(package, style, threshold = 0.01)
+lint_with_style(filename, style, threshold = 0.01)
 }
 \arguments{
-\item{package}{path to the package to check}
+\item{filename}{path to the file to check}
 
 \item{style}{a style data frame, as created by \code{\link{extract_style}}}
 
 \item{threshold}{the proportional occurrence threshold above which a lint is ignored}
 }
 \description{
-Apply a style extracted using \code{\link{extract_style}}, in order to
-check for only the style issues that aren't excepted in that package.
+Apply a style extracted using \code{\link{extract_style}}: lint a file,
+checking only for errors that appear to be prohibited in that style.
 }
 \examples{
 # Get a copy of the profile of lints from the purrr package
 data("style_purrr")
 
-# Download a copy of this package and the path to it
-path <- git2r::workdir(git2r::clone(
-  "https://github.com/maxconway/adaptalint",
-  tempfile()
-  ))
+# Get the path to a file to check
+path <- system.file("extdata", 'styles.R', package='adaptalint')
 
-# Check this package against the lint profile of purrr
+# Check this file against the lint profile of purrr
 lint_with_style(package = path, style = style_purrr)
 }

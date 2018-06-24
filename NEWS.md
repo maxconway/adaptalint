@@ -2,6 +2,7 @@
 
 - Improved description
 - Improved examples
+- Added two new functions for single files
 
 # adaptalint 0.2.0
 

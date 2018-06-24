@@ -2,29 +2,26 @@
 % Please edit documentation in R/styles.R
 \name{extract_style}
 \alias{extract_style}
-\title{Find style of a package}
+\title{Find style of a file}
 \usage{
-extract_style(package)
+extract_style(filename)
 }
 \arguments{
-\item{package}{path to the package of interest}
+\item{filename}{path to the file of interest}
 }
 \value{
 a data_frame with columns \code{lint}, \code{count}, \code{total_lints} and \code{adjusted}
 }
 \description{
 Returns the absolute and relative counts of all lint errors found in the
-package.
+file.
 The resulting style data can be applied to another file with
-\code{\link{lint_with_style}}.
+\code{\link{lint_with_style}} or \code{\link{lint_package_with_style}}.
 }
 \examples{
 
-# Download a copy of this package and the path to it
-path <- git2r::workdir(git2r::clone(
-  "https://github.com/maxconway/adaptalint",
-  tempfile()
-  ))
+# Get the path to a file to check
+path <- system.file("extdata", 'styles.R', package='adaptalint')
 
 # Find out the provile of lints in this package
 style <- extract_style(path)

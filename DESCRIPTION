@@ -7,7 +7,7 @@ Authors@R: c(person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre")),
              person("Natasha", "Latysheva", email = "nslatysheva@gmail.com",
                   role = c("aut")))
-Description: Infer the code style (which lintr are followed and which ones are 
+Description: Infer the code style (which style rules are followed and which ones are 
     not) from one package and use it to check another. This makes it easier to
     find and correct the most important problems first.
 License: GPL-3
