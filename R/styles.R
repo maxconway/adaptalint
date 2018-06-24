@@ -46,7 +46,7 @@ extract_package_style <- function(package){
 #' path <- system.file("extdata", 'styles.R', package='adaptalint')
 #'
 #' # Find out the provile of lints in this package
-#' style <- extract_style(path)
+#' style <- extract_style(filename = path)
 extract_style <- function(filename){
   filename %>%
     lint() %>%
@@ -106,7 +106,7 @@ lint_package_with_style <- function(package, style, threshold = 0.01){
 #' path <- system.file("extdata", 'styles.R', package='adaptalint')
 #'
 #' # Check this file against the lint profile of purrr
-#' lint_with_style(package = path, style = style_purrr)
+#' lint_with_style(filename = path, style = style_purrr)
 lint_with_style <- function(filename, style, threshold = 0.01){
   to_ignore <- style %>%
     filter(.data$adjusted > threshold) %>%

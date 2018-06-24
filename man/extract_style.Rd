@@ -24,5 +24,5 @@ The resulting style data can be applied to another file with
 path <- system.file("extdata", 'styles.R', package='adaptalint')
 
 # Find out the provile of lints in this package
-style <- extract_style(path)
+style <- extract_style(filename = path)
 }

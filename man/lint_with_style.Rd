@@ -25,5 +25,5 @@ data("style_purrr")
 path <- system.file("extdata", 'styles.R', package='adaptalint')
 
 # Check this file against the lint profile of purrr
-lint_with_style(package = path, style = style_purrr)
+lint_with_style(filename = path, style = style_purrr)
 }
