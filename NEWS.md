@@ -1,4 +1,4 @@
-# adaptalint 0.2.1
+# adaptalint 0.2.2
 
 - Improved description
 - Improved examples

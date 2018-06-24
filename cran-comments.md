@@ -4,9 +4,10 @@ This is a resubmission. In this version I have:
 - Elaborated on on description text, including saying that in this case, 
     'code style' means which lintr rules are followed and which aren't.
 - Removed `dontrun` on examples
-- Removed examples on functions dealing with packages - there is no clean way
-    of doing it.
-- Added two new functions, with examples, dealing with single files
+- Removed examples on functions dealing with packages - I can't find a clean,
+    cross platform method to access a package, including the source code.
+- Compensated for this by adding two new functions, with examples, dealing
+    with single files.
 
 
 ## Test environments
