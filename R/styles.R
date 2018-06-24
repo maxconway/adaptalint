@@ -14,11 +14,15 @@
 #'
 #' @export
 #' @examples
-#' \dontrun{
-#' path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
 #'
+#' # Download a copy of this package and the path to it
+#' path <- git2r::workdir(git2r::clone(
+#'   "https://github.com/maxconway/adaptalint",
+#'   tempfile()
+#'   ))
+#'
+#' # Find out the provile of lints in this package
 #' style <- extract_style(path)
-#' }
 extract_style <- function(package){
   package %>%
     lint_package() %>%
@@ -46,13 +50,17 @@ extract_style <- function(package){
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' # Get a copy of the profile of lints from the purrr package
 #' data("style_purrr")
 #'
-#' path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
+#' # Download a copy of this package and the path to it
+#' path <- git2r::workdir(git2r::clone(
+#'   "https://github.com/maxconway/adaptalint",
+#'   tempfile()
+#'   ))
 #'
+#' # Check this package against the lint profile of purrr
 #' lint_with_style(package = path, style = style_purrr)
-#' }
 lint_with_style <- function(package, style, threshold = 0.01){
   to_ignore <- style %>%
     filter(.data$adjusted > threshold) %>%

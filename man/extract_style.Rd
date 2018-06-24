@@ -19,9 +19,13 @@ The resulting style data can be applied to another file with
 \code{\link{lint_with_style}}.
 }
 \examples{
-\dontrun{
-path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
 
+# Download a copy of this package and the path to it
+path <- git2r::workdir(git2r::clone(
+  "https://github.com/maxconway/adaptalint",
+  tempfile()
+  ))
+
+# Find out the provile of lints in this package
 style <- extract_style(path)
-}
 }

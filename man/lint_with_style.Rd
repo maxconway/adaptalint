@@ -18,11 +18,15 @@ Apply a style extracted using \code{\link{extract_style}}, in order to
 check for only the style issues that aren't excepted in that package.
 }
 \examples{
-\dontrun{
+# Get a copy of the profile of lints from the purrr package
 data("style_purrr")
 
-path <- workdir(clone("https://github.com/maxconway/adaptalint", tempfile()))
+# Download a copy of this package and the path to it
+path <- git2r::workdir(git2r::clone(
+  "https://github.com/maxconway/adaptalint",
+  tempfile()
+  ))
 
+# Check this package against the lint profile of purrr
 lint_with_style(package = path, style = style_purrr)
-}
 }

@@ -1,3 +1,28 @@
+## Resubmission
+This is a resubmission. In this version I have:
+
+- Elaborated on on description text, including saying that in this case, 
+    'code style' means which lintr rules are followed and which aren't.
+- Added git2r:: to examples where required
+- Removed `dontrun` on examples
+- Added comments to examples
+
+However, I have not been able to move from 
+
+`
+path <- git2r::workdir(git2r::clone(
+  "https://github.com/maxconway/adaptalint", 
+  tempfile()
+))
+`
+
+to `path <- system.file(package="adaptalint")`.
+
+Although the suggested method is far more elegant, it doesn't typically allow
+access to the source .R files for the package, which are required for the 
+example.
+
+
 ## Test environments
 - local elementaryOS 0.4.1 Loki, based on Ubuntu 16.04.3 LTS, R 3.4.4, 3.5.0
 - local OS X install, R 3.3.2

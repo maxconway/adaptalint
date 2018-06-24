@@ -1,3 +1,8 @@
+# adaptalint 0.2.1
+
+- Improved description
+- Improved examples
+
 # adaptalint 0.2.0
 
 - Fix for namespace issue where I forgot to export check_with_style.

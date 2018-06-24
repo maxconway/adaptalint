@@ -1,13 +1,15 @@
 Package: adaptalint
 Type: Package
 Title: Check Code Style Painlessly
-Version: 0.2.0
-Date: 2018-06-20
+Version: 0.2.1
+Date: 2018-06-24
 Authors@R: c(person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre")),
              person("Natasha", "Latysheva", email = "nslatysheva@gmail.com",
                   role = c("aut")))
-Description: Infer the code style from one package and use it to check another.
+Description: Infer the code style (which lintr are followed and which ones are 
+    not) from one package and use it to check another. This makes it easier to
+    find and correct the most important problems first.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
