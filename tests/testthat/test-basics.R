@@ -1,6 +1,6 @@
 context("basics")
 
-adaptalint_path <- '.'
+adaptalint_path <- system.file(package = "adaptalint")
 filepath <- system.file('extdata', 'styles.R', package='adaptalint')
 
 test_that("exports are correct", {
