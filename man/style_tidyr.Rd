@@ -3,13 +3,13 @@
 \docType{data}
 \name{style_tidyr}
 \alias{style_tidyr}
-\title{A pre-extracted style, included for convenience}
+\title{A style extracted from a popular package, included for convenience}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 7 rows and 4 columns.}
 \usage{
 style_tidyr
 }
 \description{
-A pre-extracted style, included for convenience
+A style extracted from a popular package, included for convenience
 }
 \seealso{
 Other bundled_styles: \code{\link{style_adaptalint}},

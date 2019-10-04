@@ -23,6 +23,6 @@ The resulting style data can be applied to another file with
 # Get the path to a file to check
 path <- system.file("extdata", 'styles.R', package='adaptalint')
 
-# Find out the provile of lints in this package
+# Find out the profile of lints in this package
 style <- extract_style(filename = path)
 }

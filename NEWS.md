@@ -1,3 +1,8 @@
+# adaptalint 0.2.4
+
+- Small change to tests to work with new R version
+- Readme typos
+
 # adaptalint 0.2.3
 
 - Improved description

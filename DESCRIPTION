@@ -1,7 +1,7 @@
 Package: adaptalint
 Type: Package
 Title: Check Code Style Painlessly
-Version: 0.2.3.9000
+Version: 0.2.4
 Date: 2019-10-04
 Authors@R: c(person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre")),

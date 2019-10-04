@@ -1,13 +1,13 @@
 # adaptalint
 
-Adaptalint is a package to infer the code style from one package and use it to check another.
+`adaptalint` is a package to infer the code style from one package and use it to check another.
 This makes linting much less painful, since you don't need to do as much configuration, and makes it easy to compare your code quality to real examples.
 
-This works by running rlint on the first package to find all issues, to build up a picture of its style. Then when this style is applied to a second package, issues are ignored if they are common in the first package, since they are assumed to be acceptable.
+This works by running `lintr` on the first package to find all issues, to build up a picture of its style. Then when this style is applied to a second package, issues are ignored if they are common in the first package, since they are assumed to be acceptable.
 
 ## Installation
 
-You can install adaptalint from github with:
+You can install `adaptalint` from github with:
 
 
 ``` r
