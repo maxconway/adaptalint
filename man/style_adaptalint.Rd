@@ -17,4 +17,5 @@ Other bundled_styles: \code{\link{style_dplyr}},
   \code{\link{style_plyr}}, \code{\link{style_purrr}},
   \code{\link{style_tidyr}}
 }
+\concept{bundled_styles}
 \keyword{datasets}

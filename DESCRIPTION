@@ -1,8 +1,8 @@
 Package: adaptalint
 Type: Package
 Title: Check Code Style Painlessly
-Version: 0.2.3
-Date: 2018-06-24
+Version: 0.2.3.9000
+Date: 2019-10-04
 Authors@R: c(person("Max", "Conway", email = "conway.max1@gmail.com",
                   role = c("aut", "cre")),
              person("Natasha", "Latysheva", email = "nslatysheva@gmail.com",
@@ -13,7 +13,7 @@ Description: Infer the code style (which style rules are followed and which ones
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Depends:
     R (>= 3.3.0)
 Imports:

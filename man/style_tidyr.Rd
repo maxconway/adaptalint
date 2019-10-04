@@ -17,4 +17,5 @@ Other bundled_styles: \code{\link{style_adaptalint}},
   \code{\link{style_gsheet}}, \code{\link{style_plyr}},
   \code{\link{style_purrr}}
 }
+\concept{bundled_styles}
 \keyword{datasets}
